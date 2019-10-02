@@ -14,8 +14,12 @@ class Main(object):
 
     @staticmethod
     def plot_investment(filepath, save="", show=False):
-        # TODO: implement plot_investment method
-        raise NotImplementedError
+        fig = InvestmentProject.plot(show=show)
+        if save:
+            fig.to_csv(filepath = filepath)
+
+
+
 
 if __name__ == "__main__":
     fire.Fire(Main)
